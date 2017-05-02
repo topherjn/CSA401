@@ -1,4 +1,5 @@
 #include<iostream>
+#include<iomanip>
 #include<fstream>
 #include<string>
 
@@ -23,14 +24,12 @@ int main()
 	input.open("C:\\Projects\\CSA401\\Chapter02\\Homework\\pops.csv");
 
 	while (input >> number)
-		cout << number << endl;
+	{
+		digits[charToIndex(getFirstDigit(number))]++;
+		digits[0]++;
+	}
 
 	input.close();
 
-	for (int i = 0; i < 10; i++)
-	{
-		cout << digits[i] << endl;
-	}
-
-
+	for (int i = 1; i < 10; i++) cout << setprecision(2) << (digits[i] / (double) digits[0]) * 100 << "%" << endl;
 }
