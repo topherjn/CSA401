@@ -1,3 +1,7 @@
 ﻿  duel.cpp
+c:\projects\csa401\chapter04\duel\duel\duel.cpp(24): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\projects\csa401\chapter04\duel\duel\duel.cpp(18): warning C4101: 'aaronAlive': unreferenced local variable
+c:\projects\csa401\chapter04\duel\duel\duel.cpp(18): warning C4101: 'charlieAlive': unreferenced local variable
+c:\projects\csa401\chapter04\duel\duel\duel.cpp(18): warning C4101: 'bobAlive': unreferenced local variable
   Duel.vcxproj -> C:\Projects\CSA401\Chapter04\Duel\Debug\Duel.exe
   Duel.vcxproj -> C:\Projects\CSA401\Chapter04\Duel\Debug\Duel.pdb (Partial PDB)
