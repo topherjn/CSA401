@@ -31,9 +31,9 @@ int main()
 
 		do
 		{
-			Aaron_shoots(aaronAlive, bobAlive, charlieAlive);
 			Bob_shoots(aaronAlive, bobAlive, charlieAlive);
 			Charlie_shoots(aaronAlive, bobAlive, charlieAlive);
+			Aaron_shoots(aaronAlive, bobAlive, charlieAlive);
 
 		} while ((aaronAlive && bobAlive) || (aaronAlive && charlieAlive) || (bobAlive && charlieAlive));
 
