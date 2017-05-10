@@ -57,6 +57,7 @@ int main()
 void Aaron_shoots(bool aaron, bool & bob, bool & charlie)
 {
 	charlie = false;
+	bob = false;
 }
 
 void Bob_shoots(bool & aaron, bool bob, bool & charlie)
