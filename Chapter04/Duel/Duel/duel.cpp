@@ -56,14 +56,44 @@ int main()
 
 void Aaron_shoots(bool aaron, bool & bob, bool & charlie)
 {
-	charlie = false;
-	bob = false;
+	int shot;
+
+	if (!aaron) return;
+
+	shot = rand() % 3;
+
+	if (shot == 0)
+	{
+		if (charlie) charlie = false;
+		else if (bob) bob = false;
+	}
+
+	return;
 }
 
 void Bob_shoots(bool & aaron, bool bob, bool & charlie)
 {
+	int shot;
+
+	if (!bob) return;
+
+	shot = rand() % 2;
+
+	if (shot == 0)
+	{
+		if (charlie) charlie = false;
+		else if (aaron) aaron = false;
+	}
+
+	return;
 }
 
 void Charlie_shoots(bool & aaron, bool & bob, bool charlie)
 {
+	if (!charlie) return;
+
+	if (bob) bob = false;
+	else if (aaron) aaron = false;
+
+	return;
 }
