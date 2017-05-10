@@ -24,11 +24,39 @@ int main()
 	srand(time(NULL));
 
 	for (i = 0; i < NUM_DUELS; i++)
-		return 0;
+	{
+		aaronAlive = true;
+		bobAlive = true;
+		charlieAlive = true;
+
+		do
+		{
+			Aaron_shoots(aaronAlive, bobAlive, charlieAlive);
+			Bob_shoots(aaronAlive, bobAlive, charlieAlive);
+			Charlie_shoots(aaronAlive, bobAlive, charlieAlive);
+
+		} while ((aaronAlive && bobAlive) || (aaronAlive && charlieAlive) || (bobAlive && charlieAlive));
+
+		if (aaronAlive) aaronWins++;
+		if (bobAlive) bobWins++;
+		if (charlieAlive) charlieWins++;
+
+	}
+
+	cout.setf(ios::fixed);
+	cout.setf(ios::showpoint);
+	cout.precision(2);
+
+	cout << "Aaron won " << aaronWins << "/10000 duels or " << (static_cast<double>(aaronWins) / NUM_DUELS) * 100 << "%" << endl;
+	cout << "Bob won " << bobWins << "/10000 duels or " << (static_cast<double>(bobWins) / NUM_DUELS) * 100 << "%" << endl;
+	cout << "Charlie won " << charlieWins << "/10000 duels or " << (static_cast<double>(charlieWins) / NUM_DUELS) * 100 << "%" << endl;
+	
+	return 0;
 }
 
 void Aaron_shoots(bool aaron, bool & bob, bool & charlie)
 {
+	charlie = false;
 }
 
 void Bob_shoots(bool & aaron, bool bob, bool & charlie)
